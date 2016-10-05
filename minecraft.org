@@ -1,0 +1,67 @@
+* Minecraft Cheat Sheet
+** Import and use the module
+#+BEGIN_SRC python
+from mcpi.minecraft import Minecraft
+mc = Minecraft.create()
+#+END_SRC
+** Post to chat
+#+BEGIN_SRC python
+mc.postToChat("MESSAGE")
+#+END_SRC
+** Set player position
+*** NOTE - =x=, =y= and =z= are coordinates in 3D
+#+BEGIN_SRC python
+mc.player.setPos(x, y, z)
+#+END_SRC
+** Get player position
+#+BEGIN_SRC python
+x, y, z = mc.player.getPos()
+#+END_SRC
+** Place a block
+#+BEGIN_SRC python
+mc.setBlock(x, y, z, 1)
+#+END_SRC
+** Place multiple Blocks
+#+BEGIN_SRC python
+mc.setBlocks(x, y, z, x + 10, y + 10, z + 10, 1)
+#+END_SRC
+** Block ids
+| BLOCK              | ID |
+|--------------------+----|
+| AIR                |  0 |
+| STONE              |  1 |
+| GRASS              |  2 |
+| DIRT               |  3 |
+| WOOD_PLANKS        |  5 |
+| WATER_FLOWING      |  8 |
+| WATER_STATIONARY   |  9 |
+| LAVA_FLOWING       | 10 |
+| LAVA_STATIONARY    | 11 |
+| SAND               | 12 |
+| GRAVEL             | 13 |
+| GOLD_ORE           | 14 |
+| IRON_ORE           | 15 |
+| WOOD               | 17 |
+| LEAVES             | 18 |
+| GLASS              | 20 |
+| SANDSTONE          | 24 |
+| BED                | 26 |
+| COBWEB             | 30 |
+| GRASS_TALL         | 31 |
+| WOOL               | 35 |
+| FLOWER_YELLOW      | 37 |
+| FLOWER_CYAN        | 38 |
+| GOLD_BLOCK         | 41 |
+| STONE_SLAB         | 44 |
+| BRICK_BLOCK        | 45 |
+| TNT                | 46 |
+| OBSIDIAN           | 49 |
+| TORCH              | 50 |
+| FIRE               | 51 |
+| STAIRS_WOOD        | 53 |
+| CHEST              | 54 |
+| DIAMOND_ORE        | 56 |
+| DIAMOND_BLOCK      | 57 |
+| DOOR_WOOD          | 64 |
+| LADDER             | 65 |
+| STAIRS_COBBLESTONE | 67 |

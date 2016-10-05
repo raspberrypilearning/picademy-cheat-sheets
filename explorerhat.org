@@ -1,0 +1,39 @@
+* ExplorerHAT Cheat Sheet
+** Import the module
+#+BEGIN_SRC python
+import explorerhat
+#+END_SRC
+** Control the LEDs
+#+BEGIN_SRC python
+explorerhat.light.red.on()
+explorerhat.light.red.off()
+explorerhat.light.red.toggle()
+explorerhat.light.red.blink(1, 2)
+explorerhat.light.red.fade(1, 2, 3)
+explorerhat.light.red.pulse(1, 2, 3, 4)
+#+END_SRC
+** Outputs
+#+BEGIN_SRC python
+explorerhat.output.one.on()
+etc..
+#+END_SRC
+** Using Touch
+#+BEGIN_SRC python
+def foo(channel, event):
+    print('foo')
+
+explorerhat.touch.one.pressed(foo)
+#+END_SRC
+** Using inputs
+#+BEGIN_SRC lang
+def bar(channel, event):
+    print('bar')
+
+explorerhat.input.one.on_high(foo)
+explorerhat.input.one.on_low(bar)
+#+END_SRC
+** Motors
+#+BEGIN_SRC python
+explorerhat.motor.one.forward(100)
+explorerhat.motor.one.backward(100)
+#+END_SRC

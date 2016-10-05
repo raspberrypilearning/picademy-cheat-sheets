@@ -1,0 +1,28 @@
+* PiCamera Cheat Sheet
+** Import and use the module
+#+BEGIN_SRC python
+from picamera import PiCamera
+camera = PiCamera()
+#+END_SRC
+** Start and stop a preview
+#+BEGIN_SRC python
+camera.start_preview(alpha=192)
+camera.stop_preview()
+#+END_SRC
+** Capture a still
+#+BEGIN_SRC python
+camera.capture("/path/to/image.jpg")
+#+END_SRC
+** Capture a video
+#+BEGIN_SRC python
+camera.start_recording("path.to/video.h264")
+camera.wait_recording(secs)
+camera.stop_recording()
+#+END_SRC
+** Adding effects
+#+BEGIN_SRC python
+camera.image_effect = 'negative'
+camera.image_effect = 'colorswap'
+camera.image_effect = 'sketch'
+camera.image_effect = 'emboss'
+#+END_SRC
