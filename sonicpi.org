@@ -1,0 +1,49 @@
+#+OPTIONS: f:nil author:nil num:nil creator:nil timestamp:nil toc:nil html-style:nil
+* Sonic Pi Cheat Sheet
+** Play a sound
+#+BEGIN_SRC ruby
+play 70
+#+END_SRC
+** Play a chord
+#+BEGIN_SRC ruby
+play 72
+play 75
+play 79
+#+END_SRC
+** Play a progression
+#+BEGIN_SRC ruby
+play 72
+sleep 1
+play 75
+sleep 1
+play 79
+#+END_SRC
+** Switch synth
+#+BEGIN_SRC ruby
+use_synth :saw
+play 60
+#+END_SRC
+** Play a sample
+#+BEGIN_SRC ruby
+sample :ambi_lunar_land
+#+END_SRC
+** Iteration
+#+BEGIN_SRC ruby
+3.times do
+  play 50
+  sleep 1
+end
+#+END_SRC
+** Live loops
+*** Will play a loop that can be updated live. Loops can play simultaneously
+#+BEGIN_SRC ruby
+live_loop :foo do
+  play 60
+  sleep 1
+end
+
+live_loop :bar do
+  play 65
+  sleep 1
+end
+#+END_SRC

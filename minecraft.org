@@ -1,3 +1,4 @@
+#+OPTIONS: f:nil author:nil num:nil creator:nil timestamp:nil toc:nil html-style:nil
 * Minecraft Cheat Sheet
 ** Import and use the module
 #+BEGIN_SRC python

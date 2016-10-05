@@ -1,3 +1,4 @@
+#+OPTIONS: f:nil author:nil num:nil creator:nil timestamp:nil toc:nil html-style:nil
 * ExplorerHAT Cheat Sheet
 ** Import the module
 #+BEGIN_SRC python
@@ -25,7 +26,7 @@ def foo(channel, event):
 explorerhat.touch.one.pressed(foo)
 #+END_SRC
 ** Using inputs
-#+BEGIN_SRC lang
+#+BEGIN_SRC python
 def bar(channel, event):
     print('bar')
 
