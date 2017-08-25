@@ -1,5 +1,5 @@
 #+OPTIONS: f:nil author:nil num:nil creator:nil timestamp:nil toc:nil html-style:nil
-* Sonic Pi Cheat Sheet
+* Sonic Pi cheat sheet
 ** Play a sound
 #+BEGIN_SRC ruby
 play 70
@@ -35,7 +35,7 @@ sample :ambi_lunar_land
 end
 #+END_SRC
 ** Live loops
-*** Will play a loop that can be updated live. Loops can play simultaneously
+Will play a loop that can be updated live. Loops can play simultaneously.
 #+BEGIN_SRC ruby
 live_loop :foo do
   play 60
