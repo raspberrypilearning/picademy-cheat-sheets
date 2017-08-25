@@ -1,5 +1,5 @@
 #+OPTIONS: f:nil author:nil num:nil creator:nil timestamp:nil toc:nil html-style:nil
-* ExplorerHAT Cheat Sheet
+* Explorer HAT cheat sheet
 ** Import the module
 #+BEGIN_SRC python
 import explorerhat
@@ -18,7 +18,7 @@ explorerhat.light.red.pulse(1, 2, 3, 4)
 explorerhat.output.one.on()
 etc..
 #+END_SRC
-** Using Touch
+** Using touch
 #+BEGIN_SRC python
 def foo(channel, event):
     print('foo')
