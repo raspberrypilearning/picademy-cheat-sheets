@@ -1,5 +1,5 @@
 #+OPTIONS: f:nil author:nil num:nil creator:nil timestamp:nil toc:nil html-style:nil
-* PiCamera Cheat Sheet
+* PiCamera cheat sheet
 ** Import and use the module
 #+BEGIN_SRC python
 from picamera import PiCamera
