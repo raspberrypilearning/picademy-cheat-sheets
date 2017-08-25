@@ -1,5 +1,5 @@
 #+OPTIONS: f:nil author:nil num:nil creator:nil timestamp:nil toc:nil html-style:nil
-* Minecraft Cheat Sheet
+* Minecraft cheat sheet
 ** Import and use the module
 #+BEGIN_SRC python
 from mcpi.minecraft import Minecraft
@@ -22,11 +22,11 @@ x, y, z = mc.player.getPos()
 #+BEGIN_SRC python
 mc.setBlock(x, y, z, 1)
 #+END_SRC
-** Place multiple Blocks
+** Place multiple blocks
 #+BEGIN_SRC python
 mc.setBlocks(x, y, z, x + 10, y + 10, z + 10, 1)
 #+END_SRC
-** Block ids
+** Block IDs
 | BLOCK              | ID |
 |--------------------+----|
 | AIR                |  0 |
