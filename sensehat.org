@@ -1,0 +1,64 @@
+#+OPTIONS: f:nil author:nil num:nil creator:nil timestamp:nil toc:nil html-style:nil
+* Sense HAT cheatsheet
+** Import the module
+#+BEGIN_SRC python
+from sense_hat import SenseHat
+sense = SenseHat()
+#+END_SRC
+** Set a pixel
+#+BEGIN_SRC python
+sense.set_pixel(2, 4, (255, 0, 0))
+#+END_SRC
+** Set multiple pixels
+#+BEGIN_SRC python
+r = (255, 0, 0)
+g = (0, 255, 0)
+b = (0, 0, 255)
+
+matrix = [r, r, r, r, r, r, r, r, 
+          r, g, g, r, r, g, g, r,
+          r, g, g, r, r, g, g, r,
+          r, r, r, r, r, r, r, r,
+          r, b, r, r, r, r, b, r,
+          r, b, b, r, r, b, b, r,
+          r, r, b, b, b, b, r, r,
+          r, r, r, r, r, r, r, r]
+          
+sense.set_pixels(matrix)
+#+END_SRC
+** Orientation sensors
+#+BEGIN_SRC python
+orientation = sense.get_orientation()
+
+pitch = orientation['pitch']
+yaw = orientation['yaw']
+roll = orientation['roll']
+#+END_SRC
+** Environment sensors
+#+BEGIN_SRC python
+temp = sense.get_temperature()
+pres = sense.get_pressure()
+humi = sense.get_humidity()
+#+END_SRC
+
+** Detect joystick events
+- Looping through events
+#+BEGIN_SRC python
+while True:
+    for event in sense.stick.get_events():
+      print(event)
+#+END_SRC
+- Wait for an event
+#+BEGIN_SRC python
+event = sense.stick.wait_for_event()
+print(event)
+#+END_SRC
+- Trigger a function on an event
+#+BEGIN_SRC lang
+def joystick(event):
+    print(event)
+
+sense.stick.direction_any = joystick
+#+END_SRC
+
+
